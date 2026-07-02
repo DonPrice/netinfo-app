@@ -145,13 +145,17 @@
         }
 
         /* PRIVACY STRIP */
+        .privacy-panel {
+            max-width: 1000px;
+            margin: 0 auto 32px;
+            padding: 0 40px;
+        }
         .privacy-strip {
             background: var(--surface);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
+            border: 1px solid var(--border);
+            border-radius: 24px;
             text-align: center;
-            padding: 48px 20px;
-            margin: 20px 0;
+            padding: 48px 40px;
         }
         .privacy-strip h2 {
             font-size: 28px;
@@ -167,9 +171,8 @@
 
         /* SUPPORT */
         .support {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 60px 40px;
+            background: var(--surface);
+            padding: 48px 40px 52px;
         }
         .support h2 {
             font-size: 28px;
@@ -205,6 +208,18 @@
             color: var(--accent);
             text-decoration: none;
             font-weight: 500;
+        }
+
+        /* COMMUNITY PANEL */
+        .community-panel {
+            max-width: 1000px;
+            margin: 0 auto 60px;
+            padding: 0 40px;
+        }
+        .community-panel-inner {
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
         }
 
         /* DISCORD */
@@ -268,9 +283,8 @@
 <!-- HERO -->
 <section class="hero">
     <h1>NetInfo</h1>
-    <p>The network inspector for Safari. See exactly what's happening behind every website you visit.</p>
-    <!-- Replace href with your actual App Store link once published -->
-    <a class="btn" href="#">View on the Mac App Store</a>
+    <p>The TLS, DNS & HTTP inspector for Safari — see the network and security details you'd normally dig for in cURL or Web Inspector, in one click.</p>
+    <a class="btn" href="https://apps.apple.com/us/app/netinfo/id6774798311">View on the Mac App Store</a>
 </section>
 
 <!-- FEATURES -->
@@ -285,13 +299,13 @@
         </div>
         <div class="feature-card">
             <div class="icon">🔒</div>
-            <h3>TLS & Certificate</h3>
-            <p>View the TLS version in use (1.0–1.3) and the SSL certificate expiry date — colour-coded so you spot expiring certs instantly.</p>
+            <h3>TLS & Certificate Chain</h3>
+            <p>View the TLS version in use (1.0–1.3) and the full certificate chain — not just the leaf — with issuer, validity, and expiry colour-coded so you spot problems instantly.</p>
         </div>
         <div class="feature-card">
             <div class="icon">🛡</div>
-            <h3>HSTS Detection</h3>
-            <p>Instantly see whether a site enforces HTTP Strict Transport Security to prevent downgrade attacks.</p>
+            <h3>Security Headers Audit</h3>
+            <p>Check CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, and HSTS in one glance — no more juggling separate header-checker tools.</p>
         </div>
         <div class="feature-card">
             <div class="icon">⚡️</div>
@@ -312,13 +326,20 @@
 </section>
 
 <!-- PRIVACY STRIP -->
-<div class="privacy-strip">
-    <h2>Your privacy, guaranteed</h2>
-    <p>NetInfo collects no personal data, stores nothing, and never tracks your browsing. All connection data stays on your device. ISP lookups use the public ipapi.co API with your IP address only.</p>
+<div class="privacy-panel">
+    <div class="privacy-strip">
+        <h2>Your privacy, guaranteed</h2>
+        <p>NetInfo collects no personal data, stores nothing, and never tracks your browsing. All connection data stays on your device. ISP lookups use the public ipapi.co API with your IP address only.</p>
+    </div>
 </div>
+
+<!-- COMMUNITY PANEL: Discord + Support -->
+<div class="community-panel">
+<div class="community-panel-inner">
 
 <!-- DISCORD -->
 <div class="discord-strip">
+    <img src="PriceLabs-Community.jpg" alt="PriceLabs Community" style="width:120px;height:120px;object-fit:cover;border-radius:20px;margin-bottom:20px;box-shadow:0 4px 20px rgba(0,0,0,0.3);">
     <h2>Join the PriceLabs Community</h2>
     <p>Get help, share feedback, and follow NetInfo updates on our Discord server.</p>
     <a class="discord-btn" href="https://discord.gg/NWQpydFdce" target="_blank">
@@ -328,7 +349,7 @@
 </div>
 
 <!-- SUPPORT -->
-<section class="support">
+<section class="support" style="border-top:1px solid var(--border);">
     <h2>Support</h2>
 
     <div class="faq-item">
@@ -358,6 +379,9 @@
         <a href="mailto:support@pricelabs.au">support@pricelabs.au</a>
     </div>
 </section>
+
+</div><!-- /community-panel-inner -->
+</div><!-- /community-panel -->
 
 <footer>
     <span>© 2026 Donovan Price</span>
