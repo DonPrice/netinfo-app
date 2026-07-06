@@ -285,7 +285,7 @@
 <section class="hero">
     <img class="hero-icon" src="icon.png" alt="NetInfo">
     <h1>NetInfo</h1>
-    <p>The TLS, DNS & HTTP inspector for Safari — see the network and security details you'd normally dig for in cURL or Web Inspector, in one click.</p>
+    <p>The TLS, DNS & HTTP inspector for Safari — see the network and security details you'd normally dig for in cURL, Web Inspector, or a CORS tester, in one click. Built-in explanations mean you don't need to already know what HSTS or CSP means.</p>
     <a class="btn" href="https://apps.apple.com/us/app/netinfo/id6774798311">View on the Mac App Store</a>
 </section>
 
@@ -302,12 +302,17 @@
         <div class="feature-card">
             <div class="icon">🔒</div>
             <h3>TLS & Certificate Chain</h3>
-            <p>View the TLS version in use (1.0–1.3) and the full certificate chain — not just the leaf — with issuer, validity, and expiry colour-coded so you spot problems instantly.</p>
+            <p>View the TLS version in use (1.0–1.3) and the full certificate chain — not just the leaf — with issuer, validity, expiry, and tier labels (Leaf, Intermediate CA, Root CA, Self-signed) so you spot problems instantly. Untrusted or mismatched certificates are flagged with the reason why.</p>
         </div>
         <div class="feature-card">
             <div class="icon">🛡</div>
-            <h3>Security Headers Audit</h3>
-            <p>Check CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy, and HSTS in one glance — no more juggling separate header-checker tools.</p>
+            <h3>Security Headers & HSTS</h3>
+            <p>Check CSP, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, and Permissions-Policy — including policies set via HTML meta tags, not just HTTP headers — plus a full HSTS panel with max-age, subdomain coverage, and preload status.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🌐</div>
+            <h3>CORS Panel</h3>
+            <p>See the site's Cross-Origin Resource Sharing policy at a glance, with risky wildcard-origin-plus-credentials configurations flagged automatically.</p>
         </div>
         <div class="feature-card">
             <div class="icon">⚡️</div>
@@ -317,12 +322,22 @@
         <div class="feature-card">
             <div class="icon">📡</div>
             <h3>ASN & ISP</h3>
-            <p>Identify the Autonomous System Number and internet service provider hosting the site.</p>
+            <p>Identify the Autonomous System Number and internet service provider hosting the site, with RFC-accurate scope labels (Private network, Link-local, Loopback, CGNAT) for internal and homelab addresses.</p>
         </div>
         <div class="feature-card">
             <div class="icon">⏱</div>
             <h3>Performance Timings</h3>
             <p>DNS lookup, TCP connect, TLS handshake, and time to first byte — all measured in milliseconds.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">💡</div>
+            <h3>Explanatory Tooltips</h3>
+            <p>Hover or tap-and-hold on any metric for a plain-English explanation — no need to already know what HSTS, CSP, or a TLS handshake means.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📋</div>
+            <h3>Copy Report</h3>
+            <p>Copy a full diagnostic summary in one click — perfect for pasting into a support ticket or chat.</p>
         </div>
     </div>
 </section>
