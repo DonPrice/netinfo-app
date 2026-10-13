@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NetInfo — TLS, DNS & HTTP Inspector for Safari</title>
-    <meta name="description" content="A Safari extension that shows the TLS version, certificate chain, security headers, CORS policy, IP, ASN and connection timings for the page you're on — with plain-English explanations for every metric.">
+    <meta name="description" content="A Safari extension that shows the TLS version, certificate chain, security headers, CORS policy, IP, ASN and connection timings for the page you're on — plus a menu bar item, widgets and a Control Center control for your own connection's IPs and latency.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="NetInfo — TLS, DNS & HTTP Inspector for Safari">
     <meta property="og:description" content="See the network and security details you'd normally dig for in cURL or Web Inspector, in one click.">
@@ -216,6 +216,7 @@
         .contact-box p { font-size: 14px; color: var(--muted); margin-bottom: 16px; }
         /* Underlined, not colour-only: accent against the muted body text is
            1.12:1, well under the 3:1 that WCAG 1.4.1 needs for a colour-only cue */
+        .privacy-strip a,
         .contact-box a {
             color: var(--accent);
             text-decoration: underline;
@@ -340,6 +341,7 @@
     <img class="hero-icon" src="icon.png" width="120" height="120" alt="">
     <h1>NetInfo</h1>
     <p>The TLS, DNS & HTTP inspector for Safari — see the network and security details you'd normally dig for in cURL, Web Inspector, or a CORS tester, in one click. Built-in explanations mean you don't need to already know what HSTS or CSP means.</p>
+    <p>And it watches your own connection too, from the menu bar, desktop widgets, and Control Center.</p>
     <a class="btn" href="https://apps.apple.com/us/app/netinfo/id6774798311">View on the Mac App Store</a>
 </section>
 
@@ -396,11 +398,39 @@
     </div>
 </section>
 
+<!-- YOUR CONNECTION (1.5.0) -->
+<section class="features">
+    <h2>Your connection, at a glance</h2>
+    <p class="subtitle">New in 1.5: keep an eye on your own network without opening Safari.</p>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">📶</div>
+            <h3>Menu Bar</h3>
+            <p>Live latency with a green, amber, or red health dot. Click for your hostname, public and local IPv4/IPv6 addresses (one-click copy), ISP, VPN detection, and whether you're dual stack.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🎯</div>
+            <h3>Your Own Endpoints</h3>
+            <p>Test any host by TCP connect or HTTP HEAD, set your own amber and red thresholds, and see a sparkline of recent results.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🧩</div>
+            <h3>Desktop Widgets</h3>
+            <p>Network shows your hostname and IP addresses. Latency has a large ms figure and a Test Now button. Last Site shows the last site you inspected in Safari, with protocol, TLS, certificate expiry, and timings.</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🎛</div>
+            <h3>Control Center</h3>
+            <p>Add the NetInfo Latency control to Control Center or the menu bar. It turns green while your connection is healthy and re-tests when pressed.</p>
+        </div>
+    </div>
+</section>
+
 <!-- PRIVACY STRIP -->
 <div class="privacy-panel">
     <div class="privacy-strip">
         <h2>Your privacy, guaranteed</h2>
-        <p>NetInfo collects no personal data, stores nothing, and never tracks your browsing. All connection data stays on your device. ISP lookups use the public ipapi.co API with your IP address only.</p>
+        <p>NetInfo collects no personal data, never tracks your browsing, and has no servers. All connection data stays on your device. ISP lookups use the public ipapi.co API, and the menu bar and widgets find your public IP using ipify. <a href="privacy.html">Read the privacy policy</a>.</p>
     </div>
 </div>
 
@@ -441,7 +471,15 @@
     </div>
     <div class="faq-item">
         <h3>What macOS version is required?</h3>
-        <p>NetInfo requires macOS 10.15 Catalina or later.</p>
+        <p>NetInfo requires macOS 14.6 Sonoma or later. The Control Center control requires macOS 26 or later.</p>
+    </div>
+    <div class="faq-item">
+        <h3>How do I add the widgets or the Control Center control?</h3>
+        <p>For widgets, right-click the desktop → Edit Widgets and search for NetInfo. For the control, open Control Center → Edit Controls and search for NetInfo Latency. Resize the control to show the latency in milliseconds.</p>
+    </div>
+    <div class="faq-item">
+        <h3>How do I change the endpoints or hide the menu bar item?</h3>
+        <p>Click the NetInfo item in the menu bar, then the gear → Settings. You can add or remove endpoints, change how often they're tested, turn on Launch at Login, or turn the menu bar item off.</p>
     </div>
 
     <div class="contact-box">
